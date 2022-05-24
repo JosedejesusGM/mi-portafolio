@@ -1,0 +1,121 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    background-color: #F5F1F1 ;
+}
+
+.menu{ /*contenedor*/
+    width: 100%;
+    height: 90px;
+    margin: auto;
+    text-align: center;
+    padding: 15px;
+    background-color: white;
+    display: inline-flex;
+    box-sizing: border-box;
+}
+
+.miniatura{
+    margin-right: 890px;
+    margin-left: 3%;
+    box-sizing: border-box;
+    transform: scale(1.6);
+    color: white;
+}
+
+.enlace2{
+    height: 53px;
+    margin-top: 4px;
+    text-decoration: none;
+    color: white;
+    background-color: hotpink;
+    font-size: 18px;
+    border-radius: 5px 5px 5px 5px;
+    border-color: hotpink;
+    cursor: pointer;
+    transition: 1s;
+}
+
+.enlace2:hover{
+   transform: scale(1.1);
+   filter: opacity();
+    transition: 1s;
+    background: pink;
+    border-color: pink;
+    color: grey;
+}
+
+.enlace2{
+    margin-left: 80px;
+}
+
+.titulo{ /*Titulo*/
+    padding-left: 15px;
+}
+
+.miCuenta{ /*link que redirige a los datos personales de la cuenta*/
+    text-decoration: none;
+    color: black;
+    transition: 1s;
+}
+
+.miCuenta:hover{ /*link que redirige a los datos personales de la cuenta*/
+    color:hotpink;
+    transition: 1s;
+}
+
+.textCuenta{ /*Texto del enlace de la miCunta*/
+    padding-left: 15px;
+}
+
+.ContenedorDeTodo{ /*Contenedor de la informacion y apartados*/
+    width: 90%;
+    display: inline-flex;
+    margin-left: 5%;
+}
+
+.apartados{/*Contenedor de los apartados*/
+    width: 15%;
+    height: 130px;
+    background-color: white;
+    box-shadow: 1px 7px 17px 2px rgba(0,0,0,0.73);
+    padding: 10px;
+    margin-right: 10%;
+}
+
+.miTarjeta{ /*Enlace para redireccional a los datos de la tarjeta*/
+    text-decoration: none;
+    color: black;
+    text-align: center;
+    transition: 1s;
+    
+}
+
+.miTarjeta:hover{ /*Enlace para redireccional a los datos de la tarjeta*/
+    color: hotpink;
+    transition: 1s;
+    
+}
+
+.credito{ /*Etiqueta dentro del enlace miCuenta*/
+    text-align: center;
+}
+
+.datosPersonales{ /*Contenedor de los datos personales*/
+    width: 60%;
+    display: inline-block;
+    background-color: white;
+    box-shadow: 1px 7px 17px 2px rgba(0,0,0,0.73);
+    padding: 10px;
+}
+
+.Dato{
+    font-weight: bold;
+}
+
+.Dato, .textoD{
+    padding-left: 40px;
+}

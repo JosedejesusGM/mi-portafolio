@@ -1,0 +1,421 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+@font-face{
+    font-family: LetraGatitos;
+    src:url("../fuentes/LetraGatitos.ttf");
+}
+
+/*body{
+    background-image: url(../images/Fondo7.jpg);
+    background-attachment: fixed;
+    background-repeat: repeat-y;
+    background-size: 100% 100%;
+    background-position: 0px 0px;
+}*/
+
+h1, h2, h3, h4, h5, h6{
+    font-family: LetraGatitos;
+    letter-spacing: 2px;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+img{
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.cont-inicio{
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    /*border: 2px solid red;*/
+    background-image: url(../images/Fondo7.jpg);
+    background-size: 100% 100%;
+}
+
+.header{
+    height: 231px;
+}
+
+.contenedor1{  /*contenedor del titulo y las 2 imagenes*/
+    width: 100%;
+    box-sizing: border-box;
+    text-align: center;
+    position: relative;
+    background: rgba(93,173,226,0.5);
+    display: inline-flex;
+}
+
+.img_der{ /*imagagen de la derecha*/
+    height: 15%;
+    width: 15.2%;
+}
+
+.Mario1{  /*imagagen de la izquierda*/
+    height: 15%;
+    width: 14.8%; 
+    margin-left: 11.5%
+        
+}
+
+/*--------------------------------------------------------------------------------------
+                                       Titulo Neon
+-----------------------------------------------------------------------------------------
+*/
+
+.titulo{ /*1er titulo (del header)*/
+    width: 50%;
+    margin-top: 5%;
+    margin-left: 15%;
+    margin-right: 10px;
+    padding: 5px;
+    color: red;
+    font-size: 41px;
+    transition: 1s;
+    font-family: LetraGatitos;
+    font-weight: bold;
+}
+
+.titulo:hover{
+    text-shadow: 0 0 20px red, 0 0 50px red, 0 0 100px red;
+    transition: 1s;
+}
+/*-----------------------------------
+               Banner
+-------------------------------------*/
+.banner { 
+    background-color: #F2D7D5;
+    font-family: LetraGatitos;
+    letter-spacing: 2px;
+
+}
+
+/*--------------------------------------------------------------------------------------
+                                         MENU
+-----------------------------------------------------------------------------------------
+*/
+
+.contenedor3{  /*contenedor del logo y el menu*/
+    width: 100%;
+}
+
+.nav{ /*contenedor de logo y el menu*/
+    position: relative;
+    top: 0%;
+    width: 100%;  
+    display: flex;
+}
+
+.menu-link{ /*listas del navegador*/
+    width: 100%;
+    display: block;
+    padding: 20px;
+    background:#94C89A;
+    text-decoration: none;
+    color: aliceblue;
+    border-bottom: solid 5px blue;
+}
+
+.nav a:hover{
+    background: rgba(14, 18, 200,0.8);
+}
+nav li{
+    line-height: 5px;
+    position: relative;
+}
+.menu ul{
+    position: absolute;
+}
+.menu{/* contiene todas las listas*/
+    display: table;
+    width: 100%;
+    margin-left: 26%;
+}
+nav>ul>li{
+    float: left;
+}
+nav li li{
+    max-height: 0;
+    overflow: hidden;
+    transition: all .3s ease .5s;
+}
+/*SEGUNDO NIVEL*/
+nav li:hover>ul>li{
+    max-height: 1000px;
+    overflow: visible;
+}
+.menu ul ul{
+    left: 100%;
+    top: 0;
+}
+/*ITEMS TERCER NIVEL*/
+ul li ul li{
+    display: block;
+}
+/*Las siguientes lineas son para quitar las viñetas*/
+nav ul{
+    list-style: none;
+    padding: 0;
+}
+nav a{
+    text-decoration: none;
+    color: #ddd;
+    padding: 0 5px;
+    display: block;
+    transition: 1s;
+    width: 150px;
+    text-align: center;
+}
+.menu-link{
+    background: rgba(15,20,148,0.3);
+    font-size: 25px;
+    border-radius: 20px;
+    box-shadow: 5px 5px 0px inset;
+}
+
+
+/*---------------------------------------------------------------
+                          imagen debajo del menu
+-----------------------------------------------------------------*/
+
+.Gatito1{  /*Div*/
+    position: absolute;
+    height: 150px;
+    left: 76.2%;
+    top: 54.7%;
+}
+
+.gatito1{ /*Imagen dentro del div*/
+    filter: /*drop-shadow(50px -30px 4px red) */drop-shadow(0px 0px 15px orange);
+    width: 100%;
+    /*transform: translate(-186px, -27px); (Eje X    Eje Y) */
+}
+
+/*---------------------------------------------------------------
+                          Logo debajo del gatito
+-----------------------------------------------------------------*/
+
+.contLogo{
+    width: 7%;
+    height: 150px;
+    position: fixed;
+    top: 69.5%;
+}
+
+/*.link-img-logo{
+    
+}*/
+
+.img-logo{ /*imagen al lado del navegador*/
+    width: 100%;
+    height: 100%;
+}
+    
+/*---------------------------------------------------------------
+                          seccion de Servicios
+-----------------------------------------------------------------*/
+
+.servicios{  /*seccion que contiene todo lo de sercicios*/
+    width: 100%;
+    height: 100vh;
+    background-color: #34495E;
+}
+
+.contenedor4, .contenedor5{/* contenedor que contiene el titulo y la seccion que contiene todos los articulos*/
+    width: 98%;
+    margin: auto;
+}
+
+.serv_titulo, .quienes-titulo, .con_titulo, .contacto_titulo{  /*Titulo de los serivios y  de quienes somos*/
+    font-size: 50px;
+    color: yellow;
+    padding-top: 10px;
+}
+
+.serv-titulo, .con-titulo{  /*Titulo de cada articulo*/
+    color: aqua;
+    padding-top: 18px;
+}
+
+.texto{  /*descripcion */
+    color: white;
+    font-family: 'Neucha', cursiva;
+    letter-spacing: 2px;
+    font-size: 17px;
+    text-align: justify;;
+}
+
+.contServicios, .contemuladores{  /*Seccion de los articulos*/
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.columnaServ{  /*cada articulo*/
+    width: 23%;
+    padding: 15px;
+    margin-bottom: 30px;
+    overflow: hidden;
+}
+
+.serv-img, .con-img{  /*imagenes de los articulos*/
+    border-radius: 20px;
+    width: 100%;
+    height: 250px;
+    transition: 1s;
+}
+
+/* ------------------------------ seccion de quienes somos -----------------------*/
+
+.contQuienes{  /*seccion*/
+    width: 100%;
+    height: 100vh;
+    background-image: url(../images/Fondo1.jpg);
+    background-attachment: fixed;
+    background-size: 100% 100%;
+}
+.div1{ /*contenedor del titulo y la imagen*/
+    padding-top: 35px;
+    width: 100%;
+    display: flex;
+}
+
+.quienes-titulo{ /*titulo de la seccion quienes somos*/
+    margin-left: 38%;
+    overflow: hidden;
+    padding-top: 5px;
+    overflow: hidden;
+}
+
+.img-titulo{ /*imagen al lado del titulo*/
+    margin-left: 22.5%;
+    padding-top: 17px;
+    filter: drop-shadow(0px 0px 15px orange);
+    width: 16%;
+    overflow: hidden;
+}
+
+
+
+#quienes-texto{ /* texto de quienes somos*/
+    margin-bottom: 38px;
+    width: 100%;
+}
+
+.div2{ /*contenedor de la descripcion de la seccion acerca de nosotros*/
+    width: 50%;
+    background: rgba(87, 5, 77, 0.6);
+    filter: drop-shadow(0px 0px 15px violet);
+    overflow: hidden;
+    padding: 15px;
+    margin: auto;
+    border-radius: 20px;
+}
+
+.img-quienes{ /* imagen denajo dela descripcion*/
+    width: 18.3%;
+    text-align: center;
+    margin-left: 43%;
+    border-radius: 5%;
+    margin-top: 25px;
+    filter: opacity(80%);
+}
+
+
+/* ------------------------------ seccion lista de emuladores -----------------------*/
+
+.Lista{ /*seccion de lista de emuladores*/
+    width: 100%;
+    height: 100vh;
+    background-image: url(../images/Fondo14.png);
+    background-attachment: fixed;
+    background-size: 100% 100%;
+}
+
+.columnaList{  /*contenedor de las imagenes y texto de los emuladores*/
+    width: 21%;
+    padding: 10px;
+    overflow: hidden;
+}
+
+.con-img{  /*tamaño de cada imagen*/
+    height: 200px;
+}
+
+.con-titulo{ /*titulo de cada imagen*/
+    padding-top: 6px;
+}
+
+.con-img:hover, .serv-img:hover{
+    transform: scale(1.1);
+    transition: 1s;
+}
+
+
+/* ------------------------------ seccion de contacto -----------------------*/
+
+.contacto{ /*Contenedor de los iconos, imagenes y copyright seccion de contacto*/
+    width: 100%;
+    height: 100vh;
+    background-image: url(../images/Fondo17.jpg);
+    background-attachment: fixed;
+    background-size: 100% 100%;
+}
+
+.datos{ /*contenedor de los iconos y la imagen del michi con lentes*/
+    width: 100%;
+    display: flex;
+    /*border: 2px solid green;*/
+}
+
+.div3{ /*contenedor de los iconos*/
+    width: 75%;
+    height: 200px;
+    letter-spacing: 3px;
+    margin-top: 170px;
+    padding-left: 40px;
+    /*border: 2px solid red;*/
+}
+
+.div4{ /*contenedor del michi con lentes*/
+    width: 50%;
+    margin-left: 10%;
+}
+
+.fa-route, .fa-map-marker-alt, .fa-phone-square-alt, .fa-envelope{ /*clases de los iconos*/
+    color: white;
+    font-size: 20px;
+    /*text-align: justify;*/
+} 
+
+.parrafo{ /*Derechos de autor BY: LOS INGES*/
+    color: white;
+    text-align: center;
+}
+
+.michiIngeniero{
+    border-radius: 30px;
+    -webkit-box-reflect: below 0px -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(80%, transparent), to(rgba(255,255,255,0.7)));
+}
+
+
+
+
+
+
+
+
+
+

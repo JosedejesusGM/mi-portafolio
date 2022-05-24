@@ -1,0 +1,691 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: zombies;
+}
+body{
+    /*background-color: gray;*/
+    background: linear-gradient(-45deg, #e73c7e, #a44ac8, #23d5ab);
+}
+
+@font-face{
+    font-family: zombies;
+    src: url(../Letra/ZOMBIE.ttf);
+}
+
+@font-face{
+    font-family: Nightcore;
+    src: url(../Letra/NightcoreDemo.ttf);
+}
+
+.title{
+    font-size: 90px;
+    text-align: center;
+}
+
+.title b{
+    font-family: Nightcore;
+    font-size: 70px;
+}
+
+.cont-puntosGame{
+    width: 55%;
+    height: 85vh;
+    overflow: hidden;
+}
+
+.jugador, .zona-game{
+    width: 91%;
+    margin-left: 5%;
+}
+
+.jugador{
+    height: 85px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+    border: 20px red;
+    border-style: double inset;
+    border-bottom: 0px;
+
+
+    color: white;
+    font-size: 35px;
+    text-align: center;
+}
+
+#puntos{
+    margin-right: 50px;
+}
+
+.zona-game{
+    height: 73vh;
+    position: relative;
+    display: inline-block;
+    /*background-color: rgba(57, 243, 70, 0.3);*/
+    background-color: rgba(197, 159, 159, 0.7);
+    border: 20px red;
+    border-style: double inset;
+}
+
+
+
+
+
+
+aside{
+    width: 285px;
+    height: 200px;
+    display: inline-block;
+    position: absolute;
+    text-align: center;
+    top: 40%;
+    left: 65%;
+    padding: 15px 10px;
+    /*background-color: rgba(57, 243, 70, 0.8);*/
+    background-color: rgba(236, 73, 73, 0.8);
+    border-radius: 10px 10px 10px 10px;
+    box-shadow: -10px 10px 13px #b23636;
+}
+
+#dano{
+    font-size: 50px;
+}
+
+aside b{
+    animation: ataque 3s infinite;
+}
+
+.subT{
+    margin-top: 10px;
+    font-size: 40px;
+}
+
+#mejora{
+    font-size: 22px;
+}
+
+aside button{
+    font-size: 20px;
+    letter-spacing: 1px;
+    margin-left: 15px;
+    padding: 5px;
+    cursor: pointer;
+}
+
+
+
+
+
+
+.vida-enemigo{
+    width: 90%;
+    height: 6%;
+    display: flex;
+    position: relative;
+    margin: auto;
+    margin-top: 10px;
+    align-items: center;
+    justify-content: center;
+    background-color: red;
+    border-radius: 10px 10px 10px 10px;
+    overflow: hidden;
+}
+
+#vida{
+    color: black;
+    font-weight: bold;
+    font-size: 30px;
+    z-index: 1;
+}
+
+#porcentaje{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    background-color: greenyellow;
+    transition: 0.5s;
+}
+
+
+
+
+
+
+#danoMarcador{
+    width: 60%;
+    height: 50%;
+    position: absolute;
+    /*border: 1px solid violet;*/
+    top: -60%;
+    left: 0;
+    right: 0;
+    margin: auto;
+    text-align: center;
+    font-size: 50px;
+    color: white;
+    opacity: 0;
+}
+
+.marcador{
+    width: 60%;
+    height: 50%;
+    position: absolute;
+    /*border: 1px solid violet;*/
+    top: -60%;
+    left: 0;
+    right: 0;
+    margin: auto;
+    text-align: center;
+    font-size: 50px;
+    color: white;
+    opacity: 0;
+    animation: marcador 0.5s linear;
+}
+
+@keyframes marcador{
+    0%{
+        opacity: 1;
+        z-index: 1;
+        top: -10%;
+    }
+    50%{
+        top: -60%;
+    }
+    100%{
+        top: -10%;
+
+    }
+}
+
+
+
+
+.hit{
+    animation: hit 0.1s linear;
+}
+
+
+
+
+.cont-enemigo{
+    width: 90px;
+    height: 85px;
+    position: absolute;
+    left: 45%;
+    top: 40%;
+    transition: 0.3s;
+    /*border: 1px solid yellow;*/
+    
+}
+
+/* ------------------------------------------------------------
+------------------------Dibujo del Enemigo --------------------
+---------------------------------------------------------------*/
+
+.enemigo{
+    width: 86%;
+    height: 100%;
+    margin: auto;
+    /*animation: hit 0.2s linear infinite;*/
+}
+
+.head{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    background-color: #8EC83E;
+    /*border-radius: 50px;*/
+    border-radius: 20px;
+    box-shadow: 0px 0px 5px 0px black;
+}
+
+.eye-left{
+    width: 24%;
+    height: 24%;
+    position: absolute;
+    border-radius: 50%;
+    background-color: black;
+    top: 24%;
+    left: 15%;
+}
+
+.eye-left::after{
+    content: "";
+    width: 35%;
+    height: 35%;
+    position: absolute;
+    background-color: white;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    border-radius: 50%;
+}
+
+.eye-right{
+    width: 24%;
+    height: 24%;
+    position: absolute;
+    top: 31%;
+    right: 15%;
+}
+
+.eye-right::before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 42%;
+    /*height: 30px;*/
+    background-color: black;
+    transform: rotate(45deg);
+    border-radius: 40px;
+}
+
+.eye-right::after{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 42%;
+    background-color: black;
+    transform: rotate(-45deg);
+    border-radius: 40px;
+}
+
+.ear-left{
+    width: 16%;
+    height: 17%;
+    position: absolute;
+    background-color: #8EC83E;
+    border-radius: 50%;
+    left: -8%;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    opacity: 0.8;
+}
+
+.ear-right{
+    width: 16%;
+    height: 17%;
+    position: absolute;
+    background-color: #8EC83E;
+    border-radius: 50%;
+    right: -8%;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    opacity: 0.8;
+}
+
+
+.nose{
+    width: 10%;
+    height: 10%;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
+.nose::before{
+    content: "";
+    width: 35%;
+    height: 35%;
+    position: absolute;
+    background-color: black;
+    bottom: 0;
+    left: 0;
+    border-radius: 50%;
+}
+
+.nose::after{
+    content: "";
+    width: 35%;
+    height: 35%;
+    position: absolute;
+    background-color: black;
+    bottom: 0;
+    right: 0;
+    border-radius: 50%;
+}
+
+
+.mouth{
+    width: 68%;
+    height: 25%;
+    position: absolute;
+    background-color: black;
+    left: 0;
+    right: 0;
+    bottom: 13%;
+    margin: auto;
+    border-radius: 35px;
+}
+
+.slime{
+    width: 23%;
+    height: 70%;
+    position: absolute;
+    background-color: #DAE21C;
+    bottom: -45%;
+    border-radius: 10px 10px 0px 0px;
+    animation: slime 1s infinite;
+}
+
+.slime-1{
+    width: 20%;
+    height: 130%;
+    position: absolute;
+    background-color: #DAE21C;
+    bottom: -120%;
+    border-radius: 10px;
+    animation: slime 1s infinite;
+}
+
+.slime-2{
+    width: 20%;
+    height: 200%;
+    position: absolute;
+    background-color: #DAE21C;
+    bottom: -190%;
+    left: 0;
+    right: 0;
+    margin: auto;
+    border-radius: 10px;
+    animation: slime 1s infinite;
+}
+
+.slime-3{
+    width: 20%;
+    height: 80%;
+    position: absolute;
+    background-color: #DAE21C;
+    bottom: -70%;
+    right: 0;
+    border-radius: 10px;
+    animation: slime 1s infinite;
+}
+
+@keyframes slime{
+    0%{
+        transform: scale(1);
+    }
+
+    50%{
+        transform: scale(1.05);
+    }
+
+    100%{
+        transform: scale(1);
+    }
+}
+
+
+
+.toot-1{
+    width: 13%;
+    height: 55%;
+    position: absolute;
+    background-color: wheat;
+    border-radius: 10px 10px 0 0;
+    bottom: 3%;
+    left: 24%;
+}
+
+.toot-2{
+    width: 10%;
+    height: 50%;
+    position: absolute;
+    background-color: wheat;
+    border-radius: 10px 10px 0 0;
+    bottom: 3%;
+    right: 25%;
+}
+
+.toot-3{
+    width: 11%;
+    height: 50%;
+    position: absolute;
+    background-color: wheat;
+    border-radius: 0px 0px 10px 10px;
+    top: 3%;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
+.cerebro{
+    width: 50%;
+    height: 35%;
+    position: absolute;
+    top: -16%;
+    right: -5%;
+    /*background-color: gray;*/
+    background-color: rgba(57, 243, 70 , 0);
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.cerebro::before{
+    content: "";
+    width: 86%; /*83.5*/
+    height: 54.5%; /*50*/
+    position: absolute;
+    background-color: palevioletred;
+    bottom: 0;
+    left: 0;
+    border-radius: 0px 20px 0px 0px;
+    animation: cerebro 1s linear infinite;
+}
+
+.cer-det-1{
+    width: 13%;
+    height: 18%;
+    position: absolute;
+    bottom: 25%;
+    left: 55%;
+    background-color: wheat;
+    border-radius: 50%;
+    animation: cerebro 1s linear infinite;
+}
+
+.cer-det-2{
+    width: 10%;
+    height: 15%;
+    position: absolute;
+    bottom: 13%;
+    left: 30%;
+    background-color: wheat;
+    border-radius: 50%;
+    animation: cerebro 1s linear infinite;
+}
+
+@keyframes cerebro{
+    0%{
+        transform: scale(1);
+    }
+    50%{
+        transform: scale(1.1);
+    }
+    100%{
+        transform: scale(1);
+    }
+}
+
+@keyframes hit{
+    33%{
+        margin-left: 0;
+    }
+    66%{
+        margin-right: 0;
+    } 
+}
+
+@keyframes ataque{
+    0%{
+        color: black;
+    }
+    10%{
+        color: violet;
+    }
+    20%{
+        color: #8EC83E;
+    }
+    30%{
+        color: yellow;
+    }
+    40%{
+        color: blue;
+    }
+    50%{
+        color: orange;
+    }
+    60%{
+        color: mintcream;
+    }
+    70%{
+        color: purple;
+    }
+    80%{
+        color: deeppink;
+    }
+    90%{
+        color: red;
+    }
+    100%{
+        color: black;
+    }
+}
+
+
+
+
+
+
+
+
+
+@media screen and (max-width:1024px){
+
+    .cont-puntosGame{
+        width: 90%;
+        margin: auto;
+    }
+
+    .jugador, .zona-game{
+        width: 100%;
+        margin-left: 0;
+    }
+
+    aside{
+        display: block;
+        position:initial;
+        margin: auto;
+        margin-top: 25px;
+    }
+    
+}
+
+@media screen and (max-width:844px){
+
+    .title{
+        font-size: 70px;
+    }
+    
+    .title b{
+        font-size: 50px;
+    }
+}
+
+@media screen and (max-width:600px){
+
+    .title{
+        font-size: 45px;
+    }
+    
+    .title b{
+        font-size: 30px;
+    }
+    
+    .jugador{
+        font-size: 30px;
+    }
+}
+
+@media screen and (max-width:507px){    
+    .jugador{
+        font-size: 25px;
+    }
+}
+
+@media screen and (max-width:428px){
+
+    .title{
+        font-size: 30px;
+    }
+    
+    .title b{
+        font-size: 20px;
+    }
+    
+    .jugador{
+        font-size: 20px;
+    }
+
+    aside{
+        width: 235px;
+        height: 160px;
+    }
+    
+    #dano{
+        font-size: 35px;
+    }
+    
+    .subT{
+        font-size: 30px;
+    }
+    
+    #mejora{
+        font-size: 17px;
+    }
+    
+    aside button{
+        font-size: 17px;
+    }
+    
+}
+
+@media screen and (max-width:392px){    
+    .jugador{
+        font-size: 17px;
+    }
+}
+
+@media screen and (max-width:356px){    
+    .jugador{
+        font-size: 15px;
+    }
+}
+
+@media screen and (max-width:320px){
+    
+    .jugador{
+        font-size: 14px;
+    }
+
+    aside{
+        width: 235px;
+        height: 160px;
+    }
+    
+}
+

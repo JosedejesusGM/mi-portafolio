@@ -1,0 +1,1149 @@
+*,*::before,*::after{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #151320;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+i{
+    color: white;
+}
+
+
+
+
+
+
+
+
+
+.btn-menu{
+    position: fixed;
+    z-index: 3;
+    width: 70px; 
+    height: 55px;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    background-color: gray;
+    color: whitesmoke;
+    font-weight: bold;
+    font-family: Arial;
+    cursor: pointer;
+    border-radius: 0px 0px 20px 20px;
+    transition: 0.3s;
+
+    right: 55px;
+}
+.fa-bars{
+    font-size: 40px;
+}
+.btn-menu:hover{
+    box-shadow: 0px 0px 15px #7E7EC6;
+}
+
+header{
+    width: 180px;
+    height: 330px;
+    display: flex;
+    position: fixed;
+    background-color: #7E7EC6;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0px 0px 20px 20px;
+    right: 0;
+    transform: translateY(-100%);
+    transition: transform 0.5s ease-in;
+    z-index: 2;
+}
+
+nav{
+    margin-top: 45px;
+}
+
+nav ul{
+    display: table;
+    text-align: center;
+
+    /*border: 1px solid red;*/
+}
+
+nav li{
+    padding: 10px 15px;
+    border-radius: 5px 5px 5px 5px;
+    list-style: none;
+    cursor: pointer;
+}
+nav li:hover{
+    background-color: black;
+    animation: navegador 1s linear infinite;
+    transition: 0.3s;
+}
+
+nav a{
+    color: white;
+    text-decoration: none;
+    font-size: 25px;
+    font-family: Arial;
+}
+
+.nav-activo{
+    transform: translateY(0%);
+}
+
+@keyframes navegador{
+    0%{
+        box-shadow: 0px 0px 1px red;
+    }
+    10%{
+        box-shadow: 0px 0px 13px red;
+    }
+    100%{
+        box-shadow: 0px 0px 1px red;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.foto{
+    max-height: 350px;
+    min-width: 200px;
+}
+
+.inicio{ /*div contenedor de todo el inicio*/
+    width: 100%;
+    height: 100vh;
+    /*los siguientes dos codigos sirven para centrar los elementos dentro de este div*/
+    display: inline-block;
+}
+
+.title,.name{
+    text-align: center;
+    color: white;
+    font-size: 30px;
+    font-family: monospace;
+    /*border: 5px solid red;*/
+}
+
+/* -------------------------------------------------------------------------- */
+/* ---------------------- Efecto maquina de escribir ------------------------ */
+/* -------------------------------------------------------------------------- */
+.title{
+    margin-top: 11%;
+    margin-bottom: 2%;
+    margin-left: 4%;
+}
+
+.name{
+    margin-top: 3%;
+    margin-left: 4%;
+}
+
+.maq1,.maq2{
+    position: relative;
+}
+
+.maq1::after{
+    content: "";
+    border-left: 3px solid white;
+    background-color: #151320;
+    width: 100%;
+    height: 100%;
+    right: 0;  /*Para que empieze al final del texto*/
+    position: absolute;
+
+    animation: maqEsc 3s infinite alternate steps(14),
+    parpadeo .5s infinite step-end alternate;
+}
+
+.maq2::after{
+    content: "";
+    border-left: 2px solid white;
+    background-color: #151320;
+    width: 100%;
+    height: 100%;
+    right: 0;  /*Para que empieze al final del texto*/
+    position: absolute;
+
+    animation: maqEsc 5s infinite alternate steps(29),
+    parpadeo .5s infinite step-end alternate;
+}
+
+@keyframes maqEsc{
+    from { /*Desde*/
+        width: 100%;
+    }
+    to{ /*Hasta*/
+        width: 0;
+    }
+}
+
+@keyframes parpadeo{
+    50% {border-color: transparent}
+}
+
+/* -------------------------------------------------------------------------- */
+/* ----------------------------- Border Reinbow ----------------------------- */
+/* -------------------------------------------------------------------------- */
+
+.bordePhoto{
+    width: 200px;
+    height: 250px;
+    margin: auto;
+    /*border: outset 7px red;*/
+    border-radius: 60px 0px 60px 0px;
+    position: relative;
+}
+
+.bordePhoto::before,
+.bordePhoto::after{
+    content: '';
+    position: absolute;
+    background: linear-gradient(
+        45deg, 
+        #fb0094, 
+        #0000ff, 
+        #00ff00, 
+        #ffff00, 
+        #ff0000, 
+        #fb0094, 
+        #0000ff, 
+        #00ff00, 
+        #ffff00, 
+        #ff0000);
+    background-size: 400% 400%;
+    width: 100%;
+    height: 100%;    
+    border-radius: 60px 0px 60px 0px;
+    animation: animate 3s ease alternate infinite;
+}
+
+.bordePhoto::after{
+    filter: blur(20px);
+}
+
+@keyframes animate{
+    0%{
+        background-position: 0% 50%;
+    }
+
+    50%{
+        background-position: 100% 50%;
+    }
+
+    0%{
+        background-position: 0% 50%;
+    }
+}
+
+
+/* -------------------------------------------------------------------------- */
+/* ---------------------------- Foto de inicio ------------------------------ */
+/* -------------------------------------------------------------------------- */
+
+.myImagen{
+    width: 200;
+    height: 250px;
+    /* border: outset 7px red; */
+    border-radius: 60px 0px 60px 0px;
+    overflow: hidden;
+    position: absolute;
+
+    z-index: 1;
+}
+
+.foto{
+    position: relative;
+    top: 50%;
+    left: 50%;
+
+    /* mueve la mitad del alto de la imagen hacia arriba */
+    /*--------- transform: translate(0%, -50%); ---------*/
+
+    /* mueve la mitad del ancho de la imagen hacia la izquirda */
+    /* ------- transform: translate(-50%, 0%); -------- */
+
+    /********* esto centra la imagen dentro del div ********/
+    transform: translate(-50%, -50%);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+h1{
+    /*position: relative;*/
+    color: white;
+    font-size: 50px;
+    text-align: center;
+    font-weight: 300;
+    margin-top: 10px;
+    font-family: Arial;
+}
+
+.about{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(5, 20vh);
+    grid-template-areas: "titulo-about titulo-about titulo-about titulo-about titulo-about"
+                         "cont-foto2 cont-foto2 nom-car nom-car nom-car"
+                         "cont-foto2 cont-foto2 parf-info parf-info parf-info"
+                         "cont-foto2 cont-foto2 parf-info parf-info parf-info"
+                         "cont-foto2 cont-foto2 parf-info parf-info parf-info";
+    
+}
+
+.titulo-about{
+    grid-area: titulo-about;
+    /*font-size: 50px;*/
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cont-foto2{
+    grid-area: cont-foto2;
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+.foto2{
+    width: 200px;
+    height: 250px;
+    margin-top: 10%;
+
+    border-radius: 60px 0px 60px 0px;
+    overflow: hidden;
+}
+
+.nom-car,.parf-info{
+    text-align: center;
+    color: white;
+    font-family: arial;
+}
+
+.cont-foto2,.nom-car,.parf-info{
+    /*border: 1px solid yellow;*/
+} 
+
+.nom-car{
+    grid-area: nom-car;
+}
+
+#nombre{
+    font-size: 30px;
+    margin-right: 25%;
+}
+
+#carrera{
+    font-size: 20px;
+    margin-right: 25%;
+    color: gray;
+}
+
+.parf-info{
+    grid-area: parf-info;
+    display: flex;
+    
+    justify-content: center;
+    padding-right: 24%;
+    font-size: 20px;
+    text-align: justify;
+    line-height: 40px;
+}
+
+.parf-info span{
+    margin-top: 5%;
+}
+
+/* -------------------------------------------------------------------------- */
+/* ---------------------------- Botón de descarga --------------------------- */
+/* -------------------------------------------------------------------------- */
+
+.Cont-descarga{
+    width: 200px;
+    height: 60px;
+    position: absolute;
+    border: 1px solid white;
+
+    display: flex;
+    align-items: center;
+
+    border-radius: 10px 10px 10px 10px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    top: 60%;
+    cursor:pointer;
+    /*overflow: hidden;*/
+    transition: 0.5s;
+}
+
+.Cont-descarga:hover{
+    /*(+derecha -izquierda) - (+abajo -arriva) - opacidad*/
+    box-shadow: 0px 0px 15px white;
+    transition: 0.5s;
+}
+
+.btn-descarga{
+    margin-left: 15px;
+    color: white;
+    text-decoration: none;
+    font-family: Arial;
+    font-weight: bold;
+
+    /*background: #00ff00;*/
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-right: 20px;
+    padding-left: 20px;
+}
+
+.fa-file-arrow-down{
+    font-size: 40px;
+    position: absolute;
+    margin-top: -6%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.skills h1, .portafolio h1, .contacto h1{
+    padding-top: 20px;
+}
+
+.skills{
+    height: 300px;
+}
+
+p{
+    color: white;
+    text-align: center;
+}
+
+.cont-skills{
+    width: 100%;
+    height: 70%;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 2%;
+    gap: 25px;
+    padding-left: 20px;
+    padding-right: 20px;
+    font-family: arial;
+}
+
+.html,.css,.js,.php,.mysql{
+    text-align: center;
+    margin: auto;
+}
+
+
+.fa-html5,.fa-css3,.fa-js-square,.fa-php,.fa-mysql{
+    font-size: 100px;
+    transition: 0.5s;
+}
+
+.fa-mysql{
+    background-color: white;
+    border-radius: 10px 10px 10px 10px;
+    padding: 0 6px;
+}
+
+section div .html .fa-html5:hover{/*Se le pone color a cada icono*/
+    color: orange;
+    transition: 0.5s;
+}
+
+section div .css .fa-css3:hover{/*Se le pone color a cada icono*/
+    color: blue;
+    transition: 0.5s;
+}
+
+section div .js .fa-js-square:hover{/*Se le pone color a cada icono*/
+    color: yellow;
+    transition: 0.5s;
+}
+
+section div .php .fa-php:hover{/*Se le pone color a cada icono*/
+    color: #7E7EC6;
+    transition: 0.5s;
+}
+
+section div .mysql .fa-mysql:hover{/*Se le pone color a cada icono*/
+    background-color: aqua;
+    transition: 0.5s;
+}
+
+.cont-skills,.html,.css,.js,.php,.laravel{
+    /*border: 2px solid orange;*/
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.portafolio{
+    height: 550px;
+}
+
+.cont-portafolios{
+    width: 100%;
+    height: 405px;
+    position: relative;
+    margin-top: 2%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.port{
+    width: 347px;
+    height: 200px;
+    position: relative;
+    overflow: hidden;
+    margin: auto;
+}
+
+.cont-img{
+    width: 100%;
+    height: 145px;
+    position: absolute;
+
+    background: var(--i);
+    background-size: cover;
+    border-radius: 7px 7px 7px 7px;
+    overflow: hidden;
+    transition: 0.5s;
+}
+
+.port:hover .cont-img{
+    filter: blur(4px);
+    transition: 0.5s;
+}
+
+.ver-accion,.ver-codigo{
+    position: absolute;
+    top: 35%;
+    background-color: gray;
+    text-decoration: none;
+    padding: 7px;
+    border-radius: 5px 5px 5px 5px;
+    color: white;
+    font-family: Arial;
+    transition: 0.5s;
+}
+.ver-accion{
+    left: 12%;
+}
+.ver-codigo{
+    right: 13%;
+}
+
+.port:hover .ver-accion{
+    z-index: 1;
+    transition: 0.5s;
+}
+
+.port:hover .ver-codigo{
+    z-index: 1;
+    transition: 0.5s;
+}
+
+.tecn-use{
+    width: 100%;
+    height: 30px;
+    position: absolute;
+    font-family: arial;
+    top: 73%;
+}
+
+.tecn-use span{
+    position: relative;
+    color: white;
+    font-weight: bold;
+    background-color: #151320;
+    border-radius: 5px 5px 5px 5px;
+    padding: 4px;
+    top: 20%;
+    margin-right: 20px;
+}
+
+
+.tecn-use span:hover{
+    color: black;
+    background-color: white;
+}
+
+.cont-portafolios,.cont-img,.tecn-use{
+    /*border: 1px solid blue;*/
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+.contacto{
+    height: 250px;
+}
+
+.correo, .celular, .linkedin{
+    display: block;
+    color: white;
+    text-align: center;
+    font-weight: bold;
+    font-size: 30px;
+    font-family: arial;
+    margin-top: 1.5%;
+    text-decoration: none;
+}
+
+.contacto a:hover, .contacto i:hover{
+    color: aqua;
+}
+
+.about,.skills,.portafolio,.contacto{
+    width: 90%;
+    margin: auto;
+    margin-top: 25px;
+    box-shadow: 0px 0px 10px white;
+    border-radius: 15px 15px 15px 15px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width:1201px) {
+    .portafolio{
+        height: 106vh;
+    }
+    
+    .cont-portafolios{
+        height: 85%;
+    }
+}
+
+@media screen and (max-width:1145px) {
+    #nombre{
+        margin-right: 20%;
+    }
+    
+    #carrera{
+        margin-right: 20%;
+    }
+    
+    .parf-info{
+        padding-right: 17%;
+    }
+    .parf-info span{
+        margin-top: 0;
+    }
+}
+
+@media screen and (max-width:1024px){
+
+    .btn-menu{
+        width: 60px; 
+        height: 50px;
+        right: 60px;
+    }
+    .fa-bars{
+        font-size: 30px;
+    }
+
+    .cont-portafolios{
+        /*height: 88%;*/
+        gap: 25px;
+    }
+    
+    .port{
+        overflow: visible;
+    }
+
+    .port:hover .cont-img{
+        filter: blur(0px);
+    }
+    
+    .ver-accion,.ver-codigo{
+        top: 89%;
+    }
+    .ver-accion:hover,.ver-codigo:hover{
+        background-color: #7E7EC6;
+    }
+}
+
+@media screen and (max-width:985px) {
+    .title{
+        margin-top: 15%;
+    }
+}
+
+@media screen and (max-width:928px) {
+    #nombre{
+        font-size: 27px;
+    }
+    
+    #carrera{
+        font-size: 18px;
+    }
+    
+    .parf-info{
+        font-size: 18px;
+        line-height: 36px;
+    }
+}
+
+
+@media screen and (max-width:858px) {
+    .btn-menu{
+        right: 50px;
+    }
+    
+    header{
+        width: 160px;
+        height: 300px;
+    }
+    
+    nav{
+        margin-top: 40px;
+    }
+    
+    nav a{
+        font-size: 22px;
+    }
+
+
+    .title{
+        margin-top: 20%;
+    }
+}
+
+@media screen and (max-width:824px) {
+    #nombre{
+        margin-right: 16%;
+    }
+    
+    #carrera{
+        margin-right: 16%;
+    }
+    
+    .parf-info{
+        padding-right: 11%;
+    }
+}
+
+@media screen and (max-width:821px) { /*804*/
+    .portafolio{
+        height: 175vh;
+    }
+    
+    .cont-portafolios{
+        height: 88%;
+        margin-top: 30px;
+    }
+
+    .correo, .celular, .linkedin{
+        font-size: 25px;
+        margin-top: 3%;
+    }
+}
+
+@media screen and (max-width:742px) {
+    h1{
+        font-size: 40px;
+    }
+    
+    #nombre{
+        margin-right: 16%;
+        font-size: 24px;
+    }
+    
+    #carrera{
+        margin-right: 16%;
+        font-size: 17px;
+    }
+    
+    .parf-info{
+        padding-right: 11%;
+        font-size: 17px;
+        line-height: 30px;
+    }
+
+    .contacto{
+        height: 230px;
+    }
+}
+
+@media screen and (max-width:725px) {
+    .skills{
+        height: 450px;
+    }
+
+    .cont-skills{
+        margin-top: 20px;
+        height: 78%;
+    }
+}
+
+@media screen and (max-width:700px) {
+    .about{
+        grid-template-areas: "titulo-about titulo-about titulo-about titulo-about titulo-about"
+                             "cont-foto2 cont-foto2 cont-foto2 cont-foto2 cont-foto2"
+                             "cont-foto2 cont-foto2 cont-foto2 cont-foto2 cont-foto2"
+                             "cont-foto2 cont-foto2 cont-foto2 cont-foto2 cont-foto2"
+
+                             "nom-car nom-car nom-car nom-car nom-car"
+                             "parf-info parf-info parf-info parf-info parf-info"
+                             "parf-info parf-info parf-info parf-info parf-info";
+    }
+
+    .foto2{
+        margin-top: 0;
+    }
+
+    .Cont-descarga{
+        top: 75%;
+    }
+    
+    #nombre{
+        margin-right: 0;
+        font-size: 30px;
+    }
+    
+    #carrera{
+        margin-right: 0;
+        font-size: 21px;
+    }
+    
+    .parf-info{
+        padding-left: 5%;
+        padding-right: 5%;
+        padding-bottom: 5%;
+        font-size: 20px;
+    }
+}
+
+@media screen and (max-width:527px) {
+    .title{
+        margin-top: 28%;
+    }
+
+    .cont-skills i{
+        font-size: 80px;
+    }
+    .fa-mysql{
+        max-height: 80px;
+        min-width: 80px;
+    }
+
+    .correo, .celular, .linkedin{
+        margin-top: 6%;
+        font-size: 20px;
+    }
+}
+
+@media screen and (max-width:499px) {
+    h1{
+        font-size: 33px;
+    }
+
+    .title{
+        margin-top: 35%;
+    }
+    .foto{
+        max-height: 300px;
+        min-width: 150px; 
+    }
+    .name{
+        font-size: 20px;
+        margin-top: 5%;
+    }
+
+
+    .bordePhoto,.foto2{
+        width: 168px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width:435px) {
+    .title{
+        margin-top: 40%;
+    }
+    #nombre{
+        font-size: 21px;
+    }
+    
+    #carrera{
+        font-size: 15px;
+    }
+    .parf-info{
+        font-size: 17px;
+    }
+
+    .port{
+        width: 250px;
+        height: 197px;
+    }
+    
+    .cont-img{
+        width: 100%;
+        height: 123px;
+    
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+    
+    .ver-accion,.ver-codigo{
+        padding: 7px;
+        border-radius: 5px 5px 5px 5px;
+    }
+    .ver-accion,.ver-codigo{
+        top: 80%;
+        font-size: 15px;
+    }
+    .ver-accion{
+        left: 6%;
+    }
+    .ver-codigo{
+        right: 6%;
+    }
+    
+    .tecn-use{
+        top: 63%;
+    }
+    
+    .tecn-use span{
+        top: 10%;
+        margin-right: 15px;
+        font-size: 12px;
+    }
+    
+    .cont-portafolios,.port,.cont-img,.tecn-use{
+        /*border: 1px solid blue;*/
+    }
+
+    .correo, .celular, .linkedin{
+        margin-top: 8%;
+        font-size: 18px;
+    }
+}
+
+@media screen and (max-width:400px) {
+    .title{
+        margin-top: 50%;
+    }
+}
+
+@media screen and (max-width:384px) {
+    .correo, .celular, .linkedin{
+        font-size: 15px;
+        margin-top: 10%;
+    }
+}
+
+@media screen and (max-width:369px) {
+    h1{
+        font-size: 29px;
+    }
+    #nombre{
+        font-size: 19px;
+    }
+    
+    #carrera{
+        font-size: 13px;
+    }
+    .parf-info{
+        font-size: 14px;
+    }
+
+    .contacto{
+        height: 200px;
+    }
+    .correo, .celular, .linkedin{
+        font-size: 14px;
+        margin-top: 8%;
+    }
+}
+
+@media screen and (max-width:332px) {
+    .title{
+        font-size: 29px;
+        margin-top: 51%;
+    }
+    .name{
+        font-size: 18px;
+        margin-top: 9%;
+    }
+}
+
+@media screen and (max-width:320px) {
+    .correo, .celular, .linkedin{
+        margin-top: 10%;
+    }
+}

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Inicar sesión</title>
+    <link rel="icon" type="image/png" href="images/Logo.png">
+    
+    <link rel="stylesheet" href="css/Estilos2.css">
+</head>
+<body>
+
+ <div class="menu">
+    <img src="images/Miniatura.png" alt="" class="miniatura">
+    
+     <form action="Registrar.html">
+     <button class="enlace2">REGISTRATE</button>
+     </form>
+ </div>
+ 
+ <br><br><br><br><br>
+  <h1 class="titulo">Iniciar sesión</h1>
+  
+  <form action="php/Validar.php" class="formulario" method="post">
+      
+      <label for="NU" class="texto" id="lNU">Nombre de usuario:</label>
+      <input type="text" class="entrada" name="userName" id="NU" placeholder="Nombre de usuario" required>
+      <br><br>
+      
+      <label for="pass" class="texto" id="password">Contraseña:</label>
+      <input type="text" class="entrada" name="clave" id="pass" placeholder="Escribe una contraseña" required>
+      <br><br>
+      
+      <div class="botones">
+         <input type="Submit" class="enlace1" value="Inicar sesión">
+      </div>
+  </form>
+   
+    
+</body>
+</html>

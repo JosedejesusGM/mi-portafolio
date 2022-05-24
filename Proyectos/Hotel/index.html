@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Reserva tu hotel</title>
+    <link rel="stylesheet" href="css/estilos.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <link rel="icon" href="images/Logo.ico">
+
+</head>
+
+<body>
+    <div class="cont-grid">
+        <h1 class="titulo">Reserva tu hotel</h1>
+        <h3 class="sub-titulo">Sistema de Reservaciónes</h3>
+        <h3 class="fecha">Fecha: <span id="fechaAct"></span> </h3>
+        <h2 class="titulo-tabla">Tabla de precios por habitación</h2>
+
+        <div class="container-precios">
+            <table id="tabla-precios" class="tabla table-hover table-striped table-sm table-light cuenta">
+                <thead class="thead-dark">
+                    <tr>
+                        <th>Ciudad</th>
+                        <th>Sencilla</th>
+                        <th>Doble</th>
+                        <th>Triple</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th id="a"></th>
+                        <th id="1"></th>
+                        <th id="2"></th>
+                        <th id="3"></th>
+                    </tr>
+                    <tr>
+                        <th id="b"></th>
+                        <th id="4"></th>
+                        <th id="5"></th>
+                        <th id="6"></th>
+                    </tr>
+                    <tr>
+                        <th id="c"></th>
+                        <th id="7"></th>
+                        <th id="8"></th>
+                        <th id="9"></th>
+                    </tr>
+                    <tr>
+                        <th id="d"></th>
+                        <th id="10"></th>
+                        <th id="11"></th>
+                        <th id="12"></th>
+                    </tr>
+                    <tr>
+                        <th id="e"></th>
+                        <th id="13"></th>
+                        <th id="14"></th>
+                        <th id="15"></th>
+                    </tr>
+                    <tr>
+                        <th id="f"></th>
+                        <th id="16"></th>
+                        <th id="17"></th>
+                        <th id="18"></th>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div id="div" class="cont carousel slide" data-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img class="d-block w-100" src="images/Aguascalientes.jpg" alt="First slide">
+                </div>
+                <div class="carousel-item">
+                    <img class="d-block w-100" src="images/Guanajuato.jpg" alt="Second slide">
+                </div>
+                <div class="carousel-item">
+                    <img class="d-block w-100" src="images/Mexico2.jpg" alt="Third slide">
+                </div>
+                <div class="carousel-item">
+                    <img class="d-block w-100" src="images/Mexico.jpg" alt="Third slide">
+                </div>
+            </div>
+
+            <a class="carousel-control-prev" href="#div" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#div" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
+
+        </div>
+
+
+        <div class="formulario">
+            <div class="tituloFormulario">
+                <h1>Reservación</h1>
+            </div>
+            
+            <form>
+                <b>Nombre:</b> <input type="text" name="Nombre" id="Nombre">
+                <br><br>
+
+                <b>Fecha de nacimiento:</b> <input type="date" name="Nac" id="Nac">
+                <br><br>
+
+                <b class="tipo_cliente">Tipo de cliente: </b>
+                <input type="radio" name="tipo" id="tipo" value="normal"><span> Normal</span>
+                <input type="radio" name="tipo" id="tipo" value="vip"><span> Vip</span>
+                <br><br>
+
+                <b>Habitación:</b><br><br>
+
+                <input type="checkbox" name="habitS" id="habitS"><span> Sencilla </span>
+                <input type="number" name="cantS" id="cantS" min="0" max="99">
+
+                <input type="checkbox" name="habitD" id="habitD"><span> Doble </span>
+                <input type="number" name="cantD" id="cantD" min="0" max="99">
+
+                <input type="checkbox" name="habitT" id="habitT"><span> Triple</span>
+                <input type="number" name="cantT" id="cantT" min="0" max="99">
+                <br><br>
+
+                <b>Ciudad donde quieres reservar: </b>
+                <select name="ciudades" id="ciudades">
+                    <option value="1C">Aguascalientes</option>
+                    <option value="2C">Guadalajara</option>
+                    <option value="3C">Guanajuato</option>
+                    <option value="4C">Mexico</option>
+                    <option value="5C">Monterrey</option>
+                    <option value="6C">Tabasco</option>
+                </select>
+                <br><br>
+
+                <b>Fecha de llegada al hotel: </b> <input type="date" name="llegada" id="llegada">
+                <br><br>
+
+                <b>Total de días que se hospeda: </b> <input type="number" name="dias" id="dias" min="1" max="99">
+                <br><br>
+
+                <input class="borrar" type="reset" name="reset" value="Limpiar campos">
+                <button type="button" onclick="calcular()" value="Generar cuenta">Generar cuenta</button>
+
+            </form>
+        </div>
+
+        <div class="contenedorDeDivs">
+            <table id="tabla-ticket" class="table table-hover table-striped table-sm table-light">
+                <thead class="thead-dark">
+                    <tr>
+                        <th colspan="4">Reserva tu hotel</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th colspan="2">Cliente: </th>
+                        <th id="nomPersona" colspan="2"></th>
+                    </tr>
+                    <tr>
+                        <th colspan="2">Ciudad: </th>
+                        <th id="ciudad" colspan="2"></th>
+                    </tr>
+                    <tr>
+                        <th colspan="2">Días de hospedaje: </th>
+                        <th id="hosp" colspan="2"></th>
+                    </tr>
+                    <tr>
+                        <th colspan="2">Fecha de llegada: </th>
+                        <th id="fechaL" colspan="2"></th>
+                    </tr>
+                    <tr>
+                        <th colspan="2">Fecha de salida: </th>
+                        <th id="fechaS" colspan="2"></th>
+                    </tr>
+                    <tr>
+                        <th class="bg-success">Tipo</th>
+                        <th class="bg-success">Cant</th>
+                        <th class="bg-success">Costo</th>
+                        <th class="bg-success">Total</th>
+                    </tr>
+                    <tr>
+                        <th>Simple</th>
+                        <th id="canS"></th>
+                        <th id="cS"></th>
+                        <th id="tS"></th>
+                    </tr>
+                    <tr>
+                        <th>Doble</th>
+                        <th id="canD"></th>
+                        <th id="cD"></th>
+                        <th id="tD"></th>
+                    </tr>
+                    <tr>
+                        <th>Triple</th>
+                        <th id="canT"></th>
+                        <th id="cT"></th>
+                        <th id="tT"></th>
+                    </tr>
+                    <tr>
+                        <th colspan="2" class="bg-danger">Total a pagar: </th>
+                        <th id="totalP" colspan="2" class="table-danger"></th>
+                    </tr>
+                    <tr>
+                        <th colspan="2" class="bg-info">Total con descuento cumpleaños: </th>
+                        <th id="totalDC" colspan="2" class="table-info"></th>
+                    </tr>
+                    <tr>
+                        <th colspan="2" class="bg-info">Total con descuento VIP: </th>
+                        <th id="totalDV" colspan="2" class="table-info"></th>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+        
+
+
+
+
+       
+
+
+        <script src="js/funciones.js"></script>
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    
+</body></html>
