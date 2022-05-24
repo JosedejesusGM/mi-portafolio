@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Registrar</title>
+    <link rel="icon" type="image/png" href="images/Logo.png">
+    
+    <link rel="stylesheet" href="css/Estilos2.css">
+</head>
+<body>
+
+ <div class="menu">
+    <img src="images/Miniatura.png" alt="" class="miniatura">
+     
+     <form action="Login.html">
+     <button class="enlace2">INICIAR SESION</button>
+     </form>
+ </div>
+ 
+  <h1 class="titulo">Registrate</h1>
+  
+  <form action="php/Registrar.php" class="formulario" method="post">
+      <label for="nombre" class="texto" id="lnombre">Nombre:</label>
+      <input type="text" class="entrada" name="nombre" id="nombre" placeholder="Escribe tu nombre" required>
+      <br><br>
+      
+      <label for="PrimA" class="texto" id="lPA">Primer apellido:</label>
+      <input type="text" class="entrada" name="PrimA" id="PrimA" placeholder="Escribe tu primer apellido" required>
+      <br><br>
+      
+      <label for="SegA" class="texto" id="lSA">Segundo apellido:</label>
+      <input type="text" class="entrada" name="SegA" placeholder="Escribe tu segundo apellido" required>
+      <br><br>
+      
+      <label for="NU" class="texto" id="lNU">Nombre de usuario:</label>
+      <input type="text" class="entrada" name="userName" id="NU" placeholder="Nombre de usuario" required>
+      <br><br>
+      
+      <label for="genero" class="texto" id="lgenero">Genero: </label>
+       <input type="radio" class="entrada" id="hombre" value="Hombre" name="genero">
+       <label for="" class="lt">Hombre </label>
+       
+       <input type="radio" class="entrada" id="mujer" value="Mujer" name="genero">
+       <label for="" class="lt">Mujer</label>
+       <br><br>
+       
+       <label for="FechNac" class="texto" id="lFN">Fecha de nacimiento:</label>
+      <input type="date" class="entrada" name="FechNac" required>
+      <br><br>
+      
+      <label for="email" class="texto" id="correo">Correo:</label>
+      <input type="text" class="entrada" name="correo" id="email" placeholder="Escribe tu correo" required>
+      <br><br>
+      
+      <label for="pass" class="texto" id="password">Contraseña:</label>
+      <input type="text" class="entrada" name="clave" id="pass" placeholder="Escribe una contraseña" required>
+      <br><br>
+      
+      <div class="botones">
+         <input type="Submit" class="enlace1" value="Crear cuenta">
+      </div>
+  </form>
+   
+    
+</body>
+</html>

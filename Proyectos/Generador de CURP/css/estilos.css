@@ -1,0 +1,233 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+img{
+    max-height: 100%;
+    max-width: 100%;
+}
+
+body{
+    background-color: #ECB38E;
+}
+
+label{
+    color: #E5BE21;
+    font-weight: 600;
+}
+
+input, select{
+    font-weight: bold;
+    border-radius: 5px 5px 5px 5px;
+    text-transform: uppercase;
+}
+
+form, .encabezado{
+    width: 100%;
+    margin: auto;
+    
+}
+
+.encabezado{
+    display: inline-flex;
+    flex-wrap: wrap;
+    height: 310px;
+}
+
+.titulo{
+    width: 100%;
+    text-align: center;
+    font-size: 90px;
+    color: rgb(179, 36, 36);
+    margin-top: 25px;
+}
+
+.img{
+    width: 50%;
+    height: 160px;   
+}
+
+.Datos_Requeridos{
+    color: red;
+    margin-left: 55%;
+    font-weight: bold;
+}
+
+.form{
+    width: 50%;
+    margin: auto;
+    text-align: center;
+    background: rgb(179, 36, 36);
+    border-radius: 15px 15px 15px 15px;
+}
+form{
+    padding: 20px;
+    
+}
+
+#nombre, #pape, #sape, #entidad, #correo{
+    width: 363px;
+    text-align: center;
+}
+
+#dia{
+    width: 57px;
+}
+
+#mes, #ano{
+    width: 118px;
+}
+
+#lnombre{
+    margin-left: 50px;
+}
+
+#lsape{
+    margin-left: -10px;
+}
+
+.botones{
+    width: 100%;
+    margin: auto;
+}
+
+.btn{
+    width: 25%; 
+    cursor: pointer;
+    padding: 3px;
+}
+
+#enviar{
+    margin-right: 35px;
+}
+
+#enviar, #borrar{
+    border-bottom: white;
+    border-radius: 10px 10px 10px 10px;
+    transition: 0.1s;
+}
+
+#enviar:hover, #borrar:hover{
+    color: white;
+    background-color: red;
+    border: 1px solid white;
+    box-shadow: 0px 0px 25px #E5BE21, 0px 0px 30px red, 0px 0px 30px #E5BE21;
+    transition: 0.5s;
+}
+
+@media screen and (max-width: 1407px){
+    .form{
+        width: 60%;
+    }
+}
+
+@media screen and (max-width: 1108px){
+    .form{
+        width: 70%;
+    }
+}
+
+@media screen and (max-width: 999px){
+    img{
+        max-height: 40%;
+    }
+    .titulo{
+        font-size: 80px;
+        margin-top: 0px;
+    }
+    .encabezado{
+        height: 280px;
+    }
+    .form{
+        width: 80%;
+    }
+}
+
+@media screen and (max-width: 920px){
+    .form{
+        width: 90%;
+    }
+}
+
+@media screen and (max-width: 736px){
+    .titulo{
+        font-size: 70px;
+    }
+}
+
+@media screen and (max-width: 585px){
+    .encabezado{
+        height: 250px;
+    }
+    .titulo{
+        font-size: 60px;
+    }
+
+    form{
+        font-size: 14px;
+    }
+    input, select{
+        font-size: 12px;
+    }
+    
+}
+
+@media screen and (max-width: 573px){
+    #lnombre{
+        margin-left: 0;
+    }
+    #lsape{
+        margin-left: 0;
+    }
+    
+}
+
+@media screen and (max-width: 531px){
+    #lfecha{
+        display: block;
+    }
+    
+}
+
+@media screen and (max-width: 524px){
+    form{
+        font-size: 12px;
+    }
+    input, select{
+        font-size: 10px;
+    }
+}
+
+@media screen and (max-width: 464px){
+    .titulo{
+        font-size: 50px;
+    }
+    #nombre, #pape, #sape, #entidad, #correo{
+        width: 280px;
+    }
+    
+    #dia{
+        width: 40px;
+    }
+    
+    #mes, #ano{
+        width: 90px;
+    }
+    .btn{
+        width: 40%; 
+    }
+}
+
+@media screen and (max-width: 408px){
+    .titulo{
+        font-size: 40px;
+    }
+}
+
+@media screen and (max-width: 356px){
+    #nombre, #pape, #sape, #entidad, #correo{
+        width: 220px;
+    }
+}
