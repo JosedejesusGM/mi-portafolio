@@ -1,0 +1,101 @@
+button{
+    width: 4.5rem;
+    height: 3.5rem;
+    border-radius: 0px 0px 20px 20px;
+    gap: 0.65rem; /*0.65rem*/
+
+    right: 54px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.box .content{
+    inset: 15px; /*espacio entre el frame y la imagen*/
+}
+
+.box::before,
+.box::after{
+    inset: -120px 160px; /*tamaño del color del marco*/
+}
+
+.box:hover:before,
+.box:hover:after{
+    inset: -120px 140px; /*tamaño del color del marco*/
+}
+
+.box .stuffed-frame{
+    inset: 3px;
+    /*background: #0e1538;*/
+}
+
+
+
+
+
+.ver-accion,.ver-codigo{
+    top: 35%;
+    padding: 7px;
+}
+.ver-accion{
+    left: 12%;
+}
+.ver-codigo{
+    right: 13%;
+}
+
+.tecn-use{
+    height: 30px;
+    top: 83%;
+    left: 4%;
+}
+
+.tecn-use span{
+    padding: 4px;
+    top: 20%;
+    margin-right: 20px;
+}
+
+
+
+
+
+
+
+.box::before,
+    .box::after{
+        inset: -120px 120px; /*tamaño del color del marco*/
+    }
+    
+    .box:hover:before,
+    .box:hover:after{
+        inset: -120px 100px; /*tamaño del color del marco*/
+    }
