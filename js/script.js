@@ -6,5 +6,6 @@ menu.addEventListener("click",vista);
 
 function vista(){
     listaMenu.classList.toggle("nav-activo");
+    menu.classList.toggle("ani-menu");
     console.log("nav-activo");
 }

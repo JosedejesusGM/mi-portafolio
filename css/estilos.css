@@ -22,9 +22,63 @@ i{
 
 
 
+button{
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 4.5rem;
+    height: 3.5rem;
+    border: 0;
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 0px 0px 20px 20px;
+    gap: 0.65rem; /*0.6rem*/
+    cursor: pointer;
+    /*border: 1px solid red;*/
+
+    z-index: 4;
+    right: 54px;
+}
+
+button > div{
+    background: white;
+    height: 4px;
+    width: 50%;
+    border-radius: 5px;
+    transition: all .5s;
+    transform-origin: left;
+}
+
+.ani-menu div:first-child{
+    transform: rotate(52deg);
+    margin-left: 21%;
+}
+
+.ani-menu div:nth-child(2){
+    opacity: 0;
+}
+
+.ani-menu div:last-child{
+    transform: rotate(-52deg);
+    margin-left: 21%;
+}
 
 
-.btn-menu{
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*.btn-menu{
     position: fixed;
     z-index: 3;
     width: 70px; 
@@ -47,7 +101,7 @@ i{
 }
 .btn-menu:hover{
     box-shadow: 0px 0px 15px #7E7EC6;
-}
+}*/
 
 header{
     width: 180px;
@@ -244,14 +298,14 @@ nav a{
     width: 100%;
     height: 100%;    
     border-radius: 60px 0px 60px 0px;
-    animation: animate 3s ease alternate infinite;
+    animation: animate-blurred 3s ease alternate infinite;
 }
 
 .bordePhoto::after{
     filter: blur(20px);
 }
 
-@keyframes animate{
+@keyframes animate-blurred{
     0%{
         background-position: 0% 50%;
     }
@@ -365,15 +419,19 @@ h1{
 
 .cont-foto2{
     grid-area: cont-foto2;
+    /*border: 1px solid red;*/
     position: relative;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
 }
 
 .foto2{
     width: 200px;
     height: 250px;
-    margin-top: 10%;
+    /*margin-top: 10%;*/
+    /*border: 1px solid red;*/
 
     border-radius: 60px 0px 60px 0px;
     overflow: hidden;
@@ -422,50 +480,72 @@ h1{
 /* -------------------------------------------------------------------------- */
 /* ---------------------------- Botón de descarga --------------------------- */
 /* -------------------------------------------------------------------------- */
-
 .Cont-descarga{
-    width: 200px;
-    height: 60px;
-    position: absolute;
-    border: 1px solid white;
+    /*width: 200px;
+    height: 60px;*/
+    /*position: absolute;*/
+    /*border: 1px solid red;*/
 
-    display: flex;
-    align-items: center;
-
-    border-radius: 10px 10px 10px 10px;
-    left: 0;
+    /*left: 0; 
     right: 0;
-    margin: auto;
-    top: 60%;
+    margin: auto;*/
+    /*top: 60%;*/
     cursor:pointer;
-    /*overflow: hidden;*/
     transition: 0.5s;
-}
-
-.Cont-descarga:hover{
-    /*(+derecha -izquierda) - (+abajo -arriva) - opacidad*/
-    box-shadow: 0px 0px 15px white;
-    transition: 0.5s;
-}
-
-.btn-descarga{
-    margin-left: 15px;
-    color: white;
-    text-decoration: none;
-    font-family: Arial;
-    font-weight: bold;
-
-    /*background: #00ff00;*/
-    padding-top: 20px;
-    padding-bottom: 20px;
-    padding-right: 20px;
-    padding-left: 20px;
 }
 
 .fa-file-arrow-down{
-    font-size: 40px;
+    font-size: 25px;
+}
+
+.btn-descarga{
+    position: relative;
+    padding: 20px 30px;
+    color: #fff;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    text-transform: uppercase;
+    font-size: 13px;
+    border: 2px solid transparent;
+    transition: 0.5s;
+    font-family: Arial;
+    font-weight: bold;
+    gap: 10px;
+}
+
+.btn-descarga:hover{
+    border: 2px solid #fff;
+}
+
+.btn-descarga::before{
+    content: '';
     position: absolute;
-    margin-top: -6%;
+    inset: 0 8px;
+    border-left: 2px solid #fff;
+    border-right: 2px solid #fff;
+    transition: 1s;
+}
+
+.btn-descarga::after{
+    content: '';
+    position: absolute;
+    inset: 8px 0;
+    border-top: 2px solid #fff;
+    border-bottom: 2px solid #fff;
+    transition: 1s;
+}
+
+.btn-descarga:hover::before{
+    inset: 0 -12px;
+    transform: skewY(15deg);
+}
+
+.btn-descarga:hover::after{
+    inset: -12px 0;
+    transform: skewX(15deg);
 }
 
 
@@ -520,9 +600,9 @@ h1{
     padding-top: 20px;
 }
 
-.skills{
-    height: 300px;
-}
+/*.skills{
+    
+}*/
 
 p{
     color: white;
@@ -531,31 +611,39 @@ p{
 
 .cont-skills{
     width: 100%;
-    height: 70%;
+    position: relative;
     display: flex;
+    justify-content: center;
+    align-items: center;
     flex-wrap: wrap;
-    margin-top: 2%;
     gap: 25px;
-    padding-left: 20px;
-    padding-right: 20px;
+    padding: 20px 20px;
+    /*border: 1px solid red;*/
     font-family: arial;
 }
 
 .html,.css,.js,.php,.mysql{
-    text-align: center;
-    margin: auto;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+    /*border: 1px solid green;*/
 }
 
 
 .fa-html5,.fa-css3,.fa-js-square,.fa-php,.fa-mysql{
-    font-size: 100px;
+    font-size: 80px;
     transition: 0.5s;
 }
 
 .fa-mysql{
     background-color: white;
     border-radius: 10px 10px 10px 10px;
-    padding: 0 6px;
+    /*padding: 0 6px;*/
+    max-height: 80px;
+    min-width: 80px;
 }
 
 section div .html .fa-html5:hover{/*Se le pone color a cada icono*/
@@ -615,11 +703,11 @@ section div .mysql .fa-mysql:hover{/*Se le pone color a cada icono*/
 
 
 
-.portafolio{
+/*.portafolio{
     height: 550px;
-}
+}*/
 
-.cont-portafolios{
+/*.cont-portafolios{
     width: 100%;
     height: 405px;
     position: relative;
@@ -649,9 +737,131 @@ section div .mysql .fa-mysql:hover{/*Se le pone color a cada icono*/
     border-radius: 7px 7px 7px 7px;
     overflow: hidden;
     transition: 0.5s;
+}*/
+
+
+
+
+
+
+
+
+
+
+.portafolio{
+    padding: 20px 20px;
 }
 
-.port:hover .cont-img{
+.container{
+    /*border: 1px solid red;*/
+    position: relative;
+    margin: 10px 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 50px;
+}
+
+.box{
+    /*border: 1px solid pink;*/
+    position: relative;
+    width: 397px;
+    height: 220px;
+    /*width: 347px;
+    height: 200px;*/
+    background: rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.box .content{
+    position: absolute;
+    inset: 15px; /*espacio entre el frame y la imagen*/
+    background: #0d122c;
+    border: 3px solid #070c23;
+    z-index: 3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    overflow: hidden;
+    background-size: cover;
+}
+
+.box::before,
+.box::after{
+    content: '';
+    position: absolute;
+    background: linear-gradient(315deg,#00ccff,#d400d4);
+    inset: -120px 160px; /*tamaño del color del marco*/
+    transition: 5s;
+    filter: hue-rotate(calc(var(--i) * 120deg));
+    animation: animate 8s linear infinite;
+}
+
+.box::after{
+    background: linear-gradient(315deg,#ffeb3b,#e91e63);
+    filter: hue-rotate(calc(var(--i) * 120deg));
+    animation-delay: -2s;
+}
+
+.box:hover:before,
+.box:hover:after{
+    animation-play-state: paused;
+    inset: -120px 140px; /*tamaño del color del marco*/
+}
+
+@keyframes animate{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+.box .stuffed-frame{
+    position: absolute;
+    inset: 3px;
+    /*background: #0e1538;*/
+    background: #151320;
+    z-index: 1;
+}
+
+.box .content .photo-frame{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 0.5s;
+    z-index: 3;
+    pointer-events: none;
+}
+
+.content{
+    height: 75%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.box:hover .content{
     filter: blur(4px);
     transition: 0.5s;
 }
@@ -674,14 +884,18 @@ section div .mysql .fa-mysql:hover{/*Se le pone color a cada icono*/
     right: 13%;
 }
 
-.port:hover .ver-accion{
-    z-index: 1;
+.box:hover .ver-accion{
+    z-index: 3;
     transition: 0.5s;
 }
 
-.port:hover .ver-codigo{
-    z-index: 1;
+.box:hover .ver-codigo{
+    z-index: 3;
     transition: 0.5s;
+}
+
+.ver-accion:hover,.ver-codigo:hover{
+    background-color: #7E7EC6;
 }
 
 .tecn-use{
@@ -689,7 +903,9 @@ section div .mysql .fa-mysql:hover{/*Se le pone color a cada icono*/
     height: 30px;
     position: absolute;
     font-family: arial;
-    top: 73%;
+    top: 83%;
+    left: 4%;
+    z-index: 1;
 }
 
 .tecn-use span{
@@ -769,14 +985,35 @@ section div .mysql .fa-mysql:hover{/*Se le pone color a cada icono*/
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 @media screen and (max-width:1201px) {
-    .portafolio{
-        height: 106vh;
-    }
-    
-    .cont-portafolios{
-        height: 85%;
-    }
+
 }
 
 @media screen and (max-width:1145px) {
@@ -807,24 +1044,28 @@ section div .mysql .fa-mysql:hover{/*Se le pone color a cada icono*/
         font-size: 30px;
     }
 
-    .cont-portafolios{
+    .box{ /*hace más grande la box del proyecto del portafolio*/
         /*height: 88%;*/
-        gap: 25px;
-    }
-    
-    .port{
-        overflow: visible;
+        /*gap: 25px;*/
+        /*border: 1px solid red;*/
+        width: 397px;
+        height: 250px;
     }
 
-    .port:hover .cont-img{
+    .content{ /*redice el tañamo de la imagen*/
+        height: 63%;
+    }
+    .box:hover .content{
         filter: blur(0px);
     }
-    
-    .ver-accion,.ver-codigo{
-        top: 89%;
+
+    .tecn-use{
+        top: 69%;
     }
-    .ver-accion:hover,.ver-codigo:hover{
-        background-color: #7E7EC6;
+
+    .ver-accion,.ver-codigo{
+        top: 81%;
+        z-index: 3;
     }
 }
 
@@ -851,9 +1092,18 @@ section div .mysql .fa-mysql:hover{/*Se le pone color a cada icono*/
 
 
 @media screen and (max-width:858px) {
-    .btn-menu{
+    /*.btn-menu{
         right: 50px;
+    }*/
+
+    button{
+        width: 4rem;
+        height: 3rem;
+        gap: 0.55rem; /*0.65rem*/
+    
+        right: 49px;
     }
+    
     
     header{
         width: 160px;
@@ -888,22 +1138,6 @@ section div .mysql .fa-mysql:hover{/*Se le pone color a cada icono*/
     }
 }
 
-@media screen and (max-width:821px) { /*804*/
-    .portafolio{
-        height: 175vh;
-    }
-    
-    .cont-portafolios{
-        height: 88%;
-        margin-top: 30px;
-    }
-
-    .correo, .celular, .linkedin{
-        font-size: 25px;
-        margin-top: 3%;
-    }
-}
-
 @media screen and (max-width:742px) {
     h1{
         font-size: 40px;
@@ -930,17 +1164,6 @@ section div .mysql .fa-mysql:hover{/*Se le pone color a cada icono*/
     }
 }
 
-@media screen and (max-width:725px) {
-    .skills{
-        height: 450px;
-    }
-
-    .cont-skills{
-        margin-top: 20px;
-        height: 78%;
-    }
-}
-
 @media screen and (max-width:700px) {
     .about{
         grid-template-areas: "titulo-about titulo-about titulo-about titulo-about titulo-about"
@@ -953,9 +1176,9 @@ section div .mysql .fa-mysql:hover{/*Se le pone color a cada icono*/
                              "parf-info parf-info parf-info parf-info parf-info";
     }
 
-    .foto2{
+    /*.foto2{
         margin-top: 0;
-    }
+    }*/
 
     .Cont-descarga{
         top: 75%;
@@ -984,14 +1207,6 @@ section div .mysql .fa-mysql:hover{/*Se le pone color a cada icono*/
         margin-top: 28%;
     }
 
-    .cont-skills i{
-        font-size: 80px;
-    }
-    .fa-mysql{
-        max-height: 80px;
-        min-width: 80px;
-    }
-
     .correo, .celular, .linkedin{
         margin-top: 6%;
         font-size: 20px;
@@ -1015,12 +1230,30 @@ section div .mysql .fa-mysql:hover{/*Se le pone color a cada icono*/
         margin-top: 5%;
     }
 
-
     .bordePhoto,.foto2{
         width: 168px;
     }
+
+    .fa-file-arrow-down{
+        font-size: 20px;
+    }
+    
+    .btn-descarga{
+        padding: 20px 25px;
+    }
 }
 
+@media screen and (max-width:480px) {
+    .box::before,
+    .box::after{
+        inset: -120px 140px; /*tamaño del color del marco*/
+    }
+    
+    .box:hover:before,
+    .box:hover:after{
+        inset: -120px 120px; /*tamaño del color del marco*/
+    }
+}
 
 
 
@@ -1046,47 +1279,16 @@ section div .mysql .fa-mysql:hover{/*Se le pone color a cada icono*/
         font-size: 17px;
     }
 
-    .port{
-        width: 250px;
-        height: 197px;
+    .box::before,
+    .box::after{
+        inset: -120px 120px; /*tamaño del color del marco*/
     }
     
-    .cont-img{
-        width: 100%;
-        height: 123px;
-    
-        background-size: contain;
-        background-repeat: no-repeat;
+    .box:hover:before,
+    .box:hover:after{
+        inset: -120px 100px; /*tamaño del color del marco*/
     }
     
-    .ver-accion,.ver-codigo{
-        padding: 7px;
-        border-radius: 5px 5px 5px 5px;
-    }
-    .ver-accion,.ver-codigo{
-        top: 80%;
-        font-size: 15px;
-    }
-    .ver-accion{
-        left: 6%;
-    }
-    .ver-codigo{
-        right: 6%;
-    }
-    
-    .tecn-use{
-        top: 63%;
-    }
-    
-    .tecn-use span{
-        top: 10%;
-        margin-right: 15px;
-        font-size: 12px;
-    }
-    
-    .cont-portafolios,.port,.cont-img,.tecn-use{
-        /*border: 1px solid blue;*/
-    }
 
     .correo, .celular, .linkedin{
         margin-top: 8%;
@@ -1098,9 +1300,32 @@ section div .mysql .fa-mysql:hover{/*Se le pone color a cada icono*/
     .title{
         margin-top: 50%;
     }
+
+    .tecn-use{
+        top: 67%; /*69*/
+    }
+
+    .tecn-use span{
+        font-size: 13px; /*16*/
+    }
+
+    .ver-accion,.ver-codigo{
+        font-size: 13px; /*16*/
+    }
+    
 }
 
 @media screen and (max-width:384px) {
+    .box::before,
+    .box::after{
+        inset: -120px 100px; /*tamaño del color del marco*/
+    }
+    
+    .box:hover:before,
+    .box:hover:after{
+        inset: -120px 80px; /*tamaño del color del marco*/
+    }
+
     .correo, .celular, .linkedin{
         font-size: 15px;
         margin-top: 10%;
@@ -1128,6 +1353,16 @@ section div .mysql .fa-mysql:hover{/*Se le pone color a cada icono*/
     .correo, .celular, .linkedin{
         font-size: 14px;
         margin-top: 8%;
+    }
+}
+
+@media screen and (max-width:342px) {
+    .tecn-use span{
+        font-size: 10px; /*13*/
+    }
+
+    .ver-accion,.ver-codigo{
+        font-size: 10px; /*13*/
     }
 }
 
