@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="icon" href="favicons/favicon-16x16.png">
+    <link rel="stylesheet" href="css/estilos.css">
+    
+    <script defer src="Js/script.js"></script>
+    
+    <title>Pokedex</title>
+</head>
+<body>
+
+    <main>
+        <img src="#" class="pokemon__image" alt="pokemon">
+
+        <h1 class="pokemon__data">
+            <span class="pokemon__number"></span> -
+            <span class="pokemon__name"></span>
+        </h1>
+
+        <form action="" class="form">
+            <input
+              type="search"
+              class="input__search active"
+              placeholder="Name or Number"
+              required>
+        </form>
+
+        <ul class="autocomplete-list" id="name-list">
+            <!-- <li>bulbasur</li>
+            <li>charizard</li>
+            <li>starivia</li>
+            <li>blastoise</li>
+            <li>pikachu</li> -->
+        </ul>
+
+        <button class="button btn-shiny"><span id="shiny">Shiny</span>&nbsp;/&nbsp;<span id="normal">Normal</span></button>
+
+        <div class="buttons">
+            <button class="button btn-prev">&lt;&ensp;Prev</button>
+            <button class="button btn-next">Next&ensp;&gt;</button>
+        </div>
+
+        <img src="images/pokedex.png" class="pokedex" alt="pokedex">
+    </main>
+    
+</body>
+</html>

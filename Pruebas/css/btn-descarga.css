@@ -1,0 +1,219 @@
+*,*::before,*::after{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    flex-wrap: wrap;
+    background: linear-gradient(45deg,#3f51b5,#e91e63);
+    gap: 50px;
+}
+
+.botn-style{
+    position: relative;
+    padding: 20px 40px;
+    color: #fff;
+    text-decoration: none;
+    display: inline-block;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    font-size: 1.5em;
+    border: 2px solid transparent;
+    transition: 0.5s;
+}
+
+.botn-style:hover{
+    border: 2px solid #fff;
+}
+
+.botn-style::before{
+    content: '';
+    position: absolute;
+    inset: 0 8px;
+    border-left: 2px solid #fff;
+    border-right: 2px solid #fff;
+    transition: 1s;
+}
+
+.botn-style::after{
+    content: '';
+    position: absolute;
+    inset: 8px 0;
+    border-top: 2px solid #fff;
+    border-bottom: 2px solid #fff;
+    transition: 1s;
+}
+
+/*----------------- Boton 1 -----------------*/
+
+.btn1:hover::before{
+    inset: 16px 8px;
+}
+
+.btn1:hover::after{
+    inset: 8px 16px;
+}
+
+/*----------------- Boton 2 -----------------*/
+
+.btn2:hover::before{
+    inset: 0 8px;
+    transform: rotateY(180deg);
+}
+
+.btn2:hover::after{
+    inset: 8px 0;
+    transform: rotateX(180deg);
+}
+/*----------------- Boton 3 -----------------*/
+
+.btn3:hover::before{
+    inset: 0 -12px;
+    transform: skewY(15deg);
+}
+
+.btn3:hover::after{
+    inset: -12px 0;
+    transform: skewX(15deg);
+}
+
+
+
+
+
+
+
+
+
+.btn4:hover,
+.btn5:hover,
+.btn6:hover{
+    border-color: transparent;
+}
+
+
+/*----------------- Boton 4 -----------------*/
+
+.btn4:hover::before{
+    inset: 0 30px;
+    transform: skew(25deg);
+}
+
+.btn4:hover::after{
+    inset: 10px 0;
+    transform: skew(-25deg);
+}
+/*----------------- Boton 5 -----------------*/
+
+.btn5:hover::before,
+.btn5:hover::after{
+    inset: 0;
+}
+/*----------------- Boton 6 -----------------*/
+
+.btn6:hover::before{
+    inset: 0 0;
+    transform: rotate(-10deg);
+}
+
+.btn6:hover::after{
+    inset: 0 -4px;
+    transform: rotate(5deg);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* -------------------------------------------------------------------------- */
+/* ---------------------------- Botón de descarga --------------------------- */
+/* -------------------------------------------------------------------------- */
+
+.Cont-descarga{
+    /*width: 200px;
+    height: 60px;*/
+    position: absolute;
+    /*border: 1px solid red;*/
+
+    /*left: 0; 
+    right: 0;
+    margin: auto;
+    top: 60%;*/
+    cursor:pointer;
+    transition: 0.5s;
+}
+
+.fa-file-arrow-down{
+    font-size: 40px;
+}
+
+.btn-descarga{
+    position: relative;
+    padding: 20px 40px;
+    color: #fff;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    text-transform: uppercase;
+    font-size: 13px;
+    border: 2px solid transparent;
+    transition: 0.5s;
+    font-family: Arial;
+    font-weight: bold;
+    gap: 10px;
+}
+
+.btn-descarga:hover{
+    border: 2px solid #fff;
+}
+
+.btn-descarga::before{
+    content: '';
+    position: absolute;
+    inset: 0 8px;
+    border-left: 2px solid #fff;
+    border-right: 2px solid #fff;
+    transition: 1s;
+}
+
+.btn-descarga::after{
+    content: '';
+    position: absolute;
+    inset: 8px 0;
+    border-top: 2px solid #fff;
+    border-bottom: 2px solid #fff;
+    transition: 1s;
+}
+
+.btn-descarga:hover::before{
+    inset: 0 -12px;
+    transform: skewY(15deg);
+}
+
+.btn-descarga:hover::after{
+    inset: -12px 0;
+    transform: skewX(15deg);
+}
+
