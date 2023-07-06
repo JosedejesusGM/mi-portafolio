@@ -1,19 +1,25 @@
 @import url('https://fonts.googleapis.com/css2?family=Oxanium:wght@300;400;500;600;700;800&display=swap');
 
+:root{
+    --pokemon-font: 'Oxanium', cursive;
+}
+
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Oxanium', cursive;
+    font-family: var(--pokemon-font);
 }
 
 body{
     text-align: center;
     background: linear-gradient(#6ab7f5, #fff);
+    /*background-color: #151320;*/
     min-height: 100vh;
 }
 
 main{
+    /*border: 1px solid green;*/
     display: inline-block;
     margin-top: 2%;
     padding: 15px;
@@ -156,3 +162,10 @@ main{
     box-shadow: inset -4px 4px 0 #222;
     font-size: 0.9rem;
 }
+
+
+
+
+
+
+

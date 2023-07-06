@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Open+Sans:wght@300&family=Oswald:wght@200&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/estilos.css">
+    <link rel="icon" href="images/favicon.ico">
+
+    <title>YouTube</title>
+</head>
+<body>
+
+    <div id="content" class="content active">
+        <header class="header">
+            <div class="cont-logo">
+                <button id="btn-menu" class="btn-menu"><i class="fa-solid fa-bars"></i></button>
+                <a href="#" class="logo"><i class="fa-brands fa-youtube"></i><span>YouTube</span></a>
+            </div>
+
+            <div class="search-bar">
+                <input type="text" placeholder="Buscar">
+                <button type="submit"><i class="fa-solid fa-search"></i></button>
+            </div>
+
+            <div class="btns-header">
+                <button title="Crear"><i class="fa-solid fa-upload"></i></button>
+                <button><i class="fa-solid fa-th"></i></button>
+                <button title="Notificaciones"><i class="fa-solid fa-bell"></i></button>
+                <button id="btn-avatar" class="avatar" title="Opciones"><img src="images/avatar.jpg" alt=""></button>
+            </div>
+
+            <aside id="options-avatar" class="cont-options">
+                <div class="options">
+                    <div class="datos">
+                        <div class="cont-datos">
+                            <div class="image-datos">
+                                <img src="images/avatar.jpg" alt="imagen">
+                            </div>
+                            <span class="name">Pozole táctico</span>
+                            <span class="correo">correo@gmail.com</span>
+                            <a href="#" class="admin-cuenta" title="Administrar cuenta">administrar cuenta</a>
+                        </div>
+                    </div>
+
+                    <hr>
+
+                    <span class="mode">Mode: </span>
+                    <button id="switch" class="switch">
+                        <span><i class="fa-solid fa-sun"></i></span>
+                        <span><i class="fa-solid fa-moon"></i></span>
+                    </button>
+                    <a href="#"><i class="fa-solid fa-clone"></i> option 1</a>
+                    <hr>
+                    <a href="#"><i class="fa-solid fa-clone"></i> option 2</a>
+                    <a href="#"><i class="fa-solid fa-clone"></i> option 3</a>
+                    <hr>
+                    <a href="#"><i class="fa-solid fa-clone"></i> option 4</a>
+                </div>
+            </aside>
+        </header>
+
+        <nav class="menu-lateral">
+            <a href="#" class="active"><i class="fa-solid fa-house"></i> Página principal</a>
+            <a href="#"><i class="fa-solid fa-fire"></i> Populares</a>
+            <a href="#"><i class="fa-solid fa-star"></i> Suscripciones</a>
+            <a href="#"><i class="fa-solid fa-folder"></i> Lista de reproduccion</a>
+
+            <hr>
+
+            <a href="#"><i class="fa-solid fa-folder"></i> Biblioteca</a>
+            <a href="#"><i class="fa-solid fa-clock-rotate-left"></i> Historial</a>
+            <a href="#"><i class="fa-solid fa-play"></i> Tus videos</a>
+            <a href="#"><i class="fa-regular fa-clock"></i> ver más tarde</a>
+
+            <hr>
+
+            <a href="#"><i class="fa-solid fa-layer-group"></i> Listas de reproducción</a>
+            <a href="#"><i class="fa-solid fa-folder"></i> Suscripciones</a>
+            <a href="#"><i class="fa-solid fa-folder"></i> HTML Y CSS</a>
+        </nav>
+
+        <main class="main">
+            <h3 class="titulo">Video recomendados</h3>
+            <div class="grid-videos">
+                <a href="" class="video">
+                    <img class="" src="https://via.placeholder.com/500x281?text=Video" alt="">
+
+                    <div class="info-video">
+                        <div class="avatar">
+                            <button title="youtuber"><img src="images/avatar.jpg" alt=""></button>
+                        </div>
+
+                            <h4 class="titulo">Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum assumenda odit eveniet temporibus doloribus. Cupiditate quod et quos sit, nulla debitis officia! Voluptatibus corrupti dolorem iure magnam, sequi rerum consequuntur?</h4>
+        
+                        <div class="chanel">
+                            <button title="canal">Pozole tactico nueva generacion para siempre con el rojas</button>
+                        </div>
+                        
+                        <div class="views-time">
+                            <span class="views">vistas</span>
+                            <span class="time">tiempo</span>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="" class="video">
+                    <img class="" src="https://via.placeholder.com/500x281?text=Video" alt="">
+
+                    <div class="info-video">
+                        <div class="avatar">
+                            <button title="youtuber"><img src="images/avatar.jpg" alt=""></button>
+                        </div>
+
+                            <h4 class="titulo">Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum assumenda odit eveniet temporibus doloribus. Cupiditate quod et quos sit, nulla debitis officia! Voluptatibus corrupti dolorem iure magnam, sequi rerum consequuntur?</h4>
+        
+                        <div class="chanel">
+                            <button>Pozole</button>
+                        </div>
+                        
+                        <div class="views-time">
+                            <span class="views">vistas</span>
+                            <span class="time">tiempo</span>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="" class="video">
+                    <img class="" src="https://via.placeholder.com/500x281?text=Video" alt="">
+
+                    <div class="info-video">
+                        <div class="avatar">
+                            <button title="youtuber"><img src="images/avatar.jpg" alt=""></button>
+                        </div>
+
+                            <h4 class="titulo">Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum assumenda odit eveniet temporibus doloribus. Cupiditate quod et quos sit, nulla debitis officia! Voluptatibus corrupti dolorem iure magnam, sequi rerum consequuntur?</h4>
+        
+                        <div class="chanel">
+                            <button>Pozole</button>
+                        </div>
+                        
+                        <div class="views-time">
+                            <span class="views">vistas</span>
+                            <span class="time">tiempo</span>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="" class="video">
+                    <img class="" src="https://via.placeholder.com/500x281?text=Video" alt="">
+
+                    <div class="info-video">
+                        <div class="avatar">
+                            <button title="youtuber"><img src="images/avatar.jpg" alt=""></button>
+                        </div>
+
+                            <h4 class="titulo">Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum assumenda odit eveniet temporibus doloribus. Cupiditate quod et quos sit, nulla debitis officia! Voluptatibus corrupti dolorem iure magnam, sequi rerum consequuntur?</h4>
+        
+                        <div class="chanel">
+                            <button>Pozole</button>
+                        </div>
+                        
+                        <div class="views-time">
+                            <span class="views">vistas</span>
+                            <span class="time">tiempo</span>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="" class="video">
+                    <img class="" src="https://via.placeholder.com/500x281?text=Video" alt="">
+
+                    <div class="info-video">
+                        <div class="avatar">
+                            <button title="youtuber"><img src="images/avatar.jpg" alt=""></button>
+                        </div>
+
+                            <h4 class="titulo">Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum assumenda odit eveniet temporibus doloribus. Cupiditate quod et quos sit, nulla debitis officia! Voluptatibus corrupti dolorem iure magnam, sequi rerum consequuntur?</h4>
+        
+                        <div class="chanel">
+                            <button>Pozole</button>
+                        </div>
+                        
+                        <div class="views-time">
+                            <span class="views">vistas</span>
+                            <span class="time">tiempo</span>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="" class="video">
+                    <img class="" src="https://via.placeholder.com/500x281?text=Video" alt="">
+
+                    <div class="info-video">
+                        <div class="avatar">
+                            <button title="youtuber"><img src="images/avatar.jpg" alt=""></button>
+                        </div>
+
+                            <h4 class="titulo">Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum assumenda odit eveniet temporibus doloribus. Cupiditate quod et quos sit, nulla debitis officia! Voluptatibus corrupti dolorem iure magnam, sequi rerum consequuntur?</h4>
+        
+                        <div class="chanel">
+                            <button>Pozole</button>
+                        </div>
+                        
+                        <div class="views-time">
+                            <span class="views">vistas</span>
+                            <span class="time">tiempo</span>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="" class="video">
+                    <img class="" src="https://via.placeholder.com/500x281?text=Video" alt="">
+
+                    <div class="info-video">
+                        <div class="avatar">
+                            <button title="youtuber"><img src="images/avatar.jpg" alt=""></button>
+                        </div>
+
+                            <h4 class="titulo">Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum assumenda odit eveniet temporibus doloribus. Cupiditate quod et quos sit, nulla debitis officia! Voluptatibus corrupti dolorem iure magnam, sequi rerum consequuntur?</h4>
+        
+                        <div class="chanel">
+                            <button>Pozole</button>
+                        </div>
+                        
+                        <div class="views-time">
+                            <span class="views">vistas</span>
+                            <span class="time">tiempo</span>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="" class="video">
+                    <img class="" src="https://via.placeholder.com/500x281?text=Video" alt="">
+
+                    <div class="info-video">
+                        <div class="avatar">
+                            <button title="youtuber"><img src="images/avatar.jpg" alt=""></button>
+                        </div>
+
+                            <h4 class="titulo">Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum assumenda odit eveniet temporibus doloribus. Cupiditate quod et quos sit, nulla debitis officia! Voluptatibus corrupti dolorem iure magnam, sequi rerum consequuntur?</h4>
+        
+                        <div class="chanel">
+                            <button>Pozole</button>
+                        </div>
+                        
+                        <div class="views-time">
+                            <span class="views">vistas</span>
+                            <span class="time">tiempo</span>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="" class="video">
+                    <img class="" src="https://via.placeholder.com/500x281?text=Video" alt="">
+
+                    <div class="info-video">
+                        <div class="avatar">
+                            <button title="youtuber"><img src="images/avatar.jpg" alt=""></button>
+                        </div>
+
+                            <h4 class="titulo">Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum assumenda odit eveniet temporibus doloribus. Cupiditate quod et quos sit, nulla debitis officia! Voluptatibus corrupti dolorem iure magnam, sequi rerum consequuntur?</h4>
+        
+                        <div class="chanel">
+                            <button>Pozole</button>
+                        </div>
+                        
+                        <div class="views-time">
+                            <span class="views">vistas</span>
+                            <span class="time">tiempo</span>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="" class="video">
+                    <img class="" src="https://via.placeholder.com/500x281?text=Video" alt="">
+
+                    <div class="info-video">
+                        <div class="avatar">
+                            <button title="youtuber"><img src="images/avatar.jpg" alt=""></button>
+                        </div>
+
+                            <h4 class="titulo">Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum assumenda odit eveniet temporibus doloribus. Cupiditate quod et quos sit, nulla debitis officia! Voluptatibus corrupti dolorem iure magnam, sequi rerum consequuntur?</h4>
+        
+                        <div class="chanel">
+                            <button>Pozole</button>
+                        </div>
+                        
+                        <div class="views-time">
+                            <span class="views">vistas</span>
+                            <span class="time">tiempo</span>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="" class="video">
+                    <img class="" src="https://via.placeholder.com/500x281?text=Video" alt="">
+
+                    <div class="info-video">
+                        <div class="avatar">
+                            <button title="youtuber"><img src="images/avatar.jpg" alt=""></button>
+                        </div>
+
+                            <h4 class="titulo">Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum assumenda odit eveniet temporibus doloribus. Cupiditate quod et quos sit, nulla debitis officia! Voluptatibus corrupti dolorem iure magnam, sequi rerum consequuntur?</h4>
+        
+                        <div class="chanel">
+                            <button>Pozole</button>
+                        </div>
+                        
+                        <div class="views-time">
+                            <span class="views">vistas</span>
+                            <span class="time">tiempo</span>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="" class="video">
+                    <img class="" src="https://via.placeholder.com/500x281?text=Video" alt="">
+
+                    <div class="info-video">
+                        <div class="avatar">
+                            <button title="youtuber"><img src="images/avatar.jpg" alt=""></button>
+                        </div>
+
+                            <h4 class="titulo">Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum assumenda odit eveniet temporibus doloribus. Cupiditate quod et quos sit, nulla debitis officia! Voluptatibus corrupti dolorem iure magnam, sequi rerum consequuntur?</h4>
+        
+                        <div class="chanel">
+                            <button>Pozole</button>
+                        </div>
+                        
+                        <div class="views-time">
+                            <span class="views">vistas</span>
+                            <span class="time">tiempo</span>
+                        </div>
+                    </div>
+                </a>
+                <!--<a href="" class="video"><img src="https://via.placeholder.com/500x281?text=Video" alt="">
+                </a>
+                <a href="" class="video"><img src="https://via.placeholder.com/500x281?text=Video" alt="">
+                </a>
+                <a href="" class="video"><img src="https://via.placeholder.com/500x281?text=Video" alt="">
+                </a>
+                <a href="" class="video"><img src="https://via.placeholder.com/500x281?text=Video" alt="">
+                </a>
+                <a href="" class="video"><img src="https://via.placeholder.com/500x281?text=Video" alt="">
+                </a>
+                <a href="" class="video"><img src="https://via.placeholder.com/500x281?text=Video" alt="">
+                </a>
+                <a href="" class="video"><img src="https://via.placeholder.com/500x281?text=Video" alt="">
+                </a>
+                <a href="" class="video"><img src="https://via.placeholder.com/500x281?text=Video" alt="">
+                </a>
+                <a href="" class="video"><img src="https://via.placeholder.com/500x281?text=Video" alt="">
+                </a>
+                <a href="" class="video"><img src="https://via.placeholder.com/500x281?text=Video" alt="">
+                </a>
+                <a href="" class="video"><img src="https://via.placeholder.com/500x281?text=Video" alt="">
+                </a>-->
+            </div>
+        </main>
+    </div>
+
+
+
+
+
+
+
+
+
+
+    <script src="https://kit.fontawesome.com/1686baa323.js" crossorigin="anonymous"></script>
+    <script src="js/script.js"></script>
+    
+</body>
+</html>
