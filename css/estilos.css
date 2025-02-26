@@ -181,7 +181,7 @@ nav a:hover{
 .title{
     margin-top: 11%;
     margin-bottom: 2%;
-    margin-left: 4%;
+    margin-left: 2%;
 }
 
 .name{
@@ -203,7 +203,7 @@ nav a:hover{
     right: 0;  /*Para que empieze al final del texto*/
     position: absolute;
 
-    animation: maqEsc 3s infinite alternate steps(14),
+    animation: maqEsc 3s infinite alternate steps(18),
     parpadeo .5s infinite step-end alternate;
 }
 
